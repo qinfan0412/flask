@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>aaaaa</h1>
+<img src="/static/0.jpg" alt="">
+{{name}}
+<hr>
+{{mydict.get('name')}}
+<br>
+{% for k,v in mydict.items() %}
+{{k}}:{{v}}<br>
+{% endfor %}
+<hr>
+{% if mydict['name'] == 'Barry Alen' %}
+{{mydict['age']}}
+{% endif %}
+</body>
+</html>

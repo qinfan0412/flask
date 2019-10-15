@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block label %}更新个人信息{% endblock %}
+{% block content %}
+    <!-- Content Row -->
+    <div class="row">
+
+        <div class="col-xl-12 col-lg-7">
+
+            <!-- Area Chart -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                        个人详情
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                    <table class="table">
+                        <tr>
+                            <td rowspan="3"  style="width: 250px">
+                                <img src="../static/{{ user.photo }}" style="width: 250px;height: 250px">
+                                <input type="file" name="photo">
+                            </td>
+                            <th>姓名:</th>
+                            <th>
+                                <input type="text" value="{{ user.name }}" name="name">
+                            </th>
+                            <th>年龄:</th>
+                            <td><input type="text" value="{{ user.age }}" name="age"></td>
+                        </tr>
+                        <tr>
+                            <th>性别:</th>
+                            <td><input type="text" value="{{ user.sex }}" name="sex"></td>
+                            <th>职业:</th>
+                            <td><input type="text" value="{{ user.identity}}" name="identity"></td>
+                        </tr>
+                        <tr>
+
+                            <th>学科:</th>
+                            <td><input type="text" value="{{ user.subject }}" name="subject"></td>
+                            <th>阶段:</th>
+                            <td><input type="text" value="{{ user.level }}" name="level"></td>
+                        </tr>
+                    </table>
+                        <input type="submit" class="btn btn-primary btn-user btn-block" value="完善个人信息">
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+{% endblock %}
